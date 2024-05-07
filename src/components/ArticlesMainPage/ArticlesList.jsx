@@ -4,14 +4,21 @@ import ArticleCard from "./ArticleCard";
 
 export default function ArticlesList() {
   const [articles, setArticles] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
+    setIsLoading(true);
     getArticles().then(({ articles }) => {
       setArticles(articles);
+      setIsLoading(false);
     });
   }, []);
 
-  return (
+  return isLoading ? (
+    <div class="loader-container">
+      <div class="loader"></div>
+    </div>
+  ) : (
     <section>
       <div className="filter">
         <select>
