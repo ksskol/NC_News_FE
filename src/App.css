@@ -1,42 +1,74 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+header {
+  background-color: #536688;
+  color: #e4e4e4;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+  margin-bottom: 15px;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+button {
+  float: right;
+  border: none;
+  background-color: #e4e4e4;
+  color: #536688;
+  border-radius: 5px;
+  padding: 5px 10px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+button:hover{
+    background-color: #6e809f;
+    color: #ebeef7;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+/* article card */
+article {
+  overflow: hidden;
+  padding-bottom: 25px;
+  padding-top: 10px;
+  border-bottom: 1px solid #536688;
+}
+
+article img {
+  max-width: 12rem;
+  border-radius: 5px;
+  float: left;
+  width: 30%;
+  margin: 10px;
+}
+
+.article-text,
+article footer {
+  float: left;
+  width: 100%;
+}
+.author,
+.votes {
+  float: right;
+  margin-right: 10px;
+}
+
+.metadata {
+  margin-left: 10px;
+  color: #95a0b3;
+}
+.article-text p {
+  color: #95a0b3;
+}
+
+/* filter */
+.filter select {
+    border: none;
+    background-color: #536688;
+    color: #ffffff;
+    border-radius: 5px;
+    padding: 8px 16px;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
   }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+  
+  .filter select:hover {
+    background-color: #6e809f;
 }
