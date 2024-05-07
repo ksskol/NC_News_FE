@@ -20,14 +20,6 @@ export default function ArticlesList() {
     </div>
   ) : (
     <section>
-      <div className="filter">
-        <select>
-          <option value="all">All News</option>
-          <option value="coding">Coding</option>
-          <option value="football">Football</option>
-          <option value="cooking">Cooking</option>
-        </select>
-      </div>
       <ul className="articles-list">
         {articles.map((article) => {
           return <ArticleCard key={article.article_id} article={article} />;
