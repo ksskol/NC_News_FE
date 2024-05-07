@@ -9,9 +9,9 @@ body {
   border: 0;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 300px) {
   article {
-    width: 500px;
+    width: 400px;
   }
 }
 

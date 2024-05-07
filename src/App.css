@@ -1,37 +1,38 @@
-
 /* loading */
 .loader-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 30vh;
-  }
-  
-.loader {
-    width: 50px;
-    padding: 8px;
-    aspect-ratio: 1;
-    border-radius: 50%;
-    background: #536688;
-    --_m: 
-      conic-gradient(#0000 10%,#000),
-      linear-gradient(#000 0 0) content-box;
-    -webkit-mask: var(--_m);
-            mask: var(--_m);
-    -webkit-mask-composite: source-out;
-            mask-composite: subtract;
-    animation: l3 1s infinite linear;
-  }
-  @keyframes l3 {to{transform: rotate(1turn)}}
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30vh;
+}
 
-  /* header */
+.loader {
+  width: 50px;
+  padding: 8px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #536688;
+  --_m: conic-gradient(#0000 10%, #000), linear-gradient(#000 0 0) content-box;
+  -webkit-mask: var(--_m);
+  mask: var(--_m);
+  -webkit-mask-composite: source-out;
+  mask-composite: subtract;
+  animation: l3 1s infinite linear;
+}
+@keyframes l3 {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+/* header */
 header {
   background-color: #536688;
   color: #e4e4e4;
-  border-radius: 5px;
   padding: 10px;
-  margin: 10px;
   margin-bottom: 15px;
+  position: sticky;
+  top: 0;
 }
 
 button {
@@ -44,9 +45,9 @@ button {
   transition: background-color 0.3s ease;
   cursor: pointer;
 }
-button:hover{
-    background-color: #6e809f;
-    color: #ebeef7;
+button:hover {
+  background-color: #6e809f;
+  color: #ebeef7;
 }
 
 /* article card */
@@ -86,16 +87,16 @@ article footer {
 
 /* filter */
 .filter select {
-    border: none;
-    background-color: #536688;
-    color: #ffffff;
-    border-radius: 5px;
-    padding: 8px 16px;
-    margin-left: 10px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .filter select:hover {
-    background-color: #6e809f;
+  border: none;
+  background-color: #536688;
+  color: #ffffff;
+  border-radius: 5px;
+  padding: 8px 16px;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.filter select:hover {
+  background-color: #6e809f;
 }
