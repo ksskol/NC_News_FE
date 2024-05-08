@@ -33,6 +33,14 @@ const getCategories = () => {
     });
 };
 
+const getAllUsers = () => {
+  return axios
+    .get(`https://nc-news-ufj8.onrender.com/api/users`)
+    .then((response) => {
+      return response;
+    });
+};
+
 const updateVotesByArticleId = (article_id, voteChange) => {
   const updateVoteObject = { inc_votes: voteChange };
 
@@ -48,4 +56,5 @@ export {
   getArticleById,
   getComments,
   updateVotesByArticleId,
+  getAllUsers,
 };
