@@ -8,7 +8,6 @@ export default function Comments({ article_id }) {
 
   useEffect(() => {
     getComments(article_id).then(({ data }) => {
-      console.log(data.comments);
       setComments(data.comments);
       setIsLoading(false);
     });

@@ -115,9 +115,13 @@ header .link:hover{
 }
 
 /* Comments */
+.log-comment{
+padding-left: 10px;
+}
 .comment{
 background-color: #e4e4e4;
-padding: 25px;
+padding: 10px;
+padding-bottom: 25px;
 border-radius: 5px;
 }
 .comment-card{
