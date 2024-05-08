@@ -9,18 +9,47 @@ body {
   border: 0;
 }
 
+/* loading */
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30vh;
+}
+
+.loader {
+  width: 20px;
+  padding: 4px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #536688;
+  --_m: conic-gradient(#0000 10%, #000), linear-gradient(#000 0 0) content-box;
+  -webkit-mask: var(--_m);
+  mask: var(--_m);
+  -webkit-mask-composite: source-out;
+  mask-composite: subtract;
+  animation: l3 1s infinite linear;
+}
+@keyframes l3 {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+/* sizing */
 @media (max-width: 300px) {
-  article {
-    width: 400px;
+  article,
+  .header-nav,
+  .filter {
+    width: 300px;
   }
 }
 
 @media (min-width: 800px) {
   article,
   .header-nav,
-  .filter{
+  .filter {
     width: 800px;
     margin: 0 auto;
   }
-
 }

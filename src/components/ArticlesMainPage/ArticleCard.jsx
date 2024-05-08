@@ -1,12 +1,11 @@
+import { Link } from "react-router-dom";
+import { formatDate, formatTime } from "../../use";
+
 export default function ArticleCard({ article }) {
-  const { created_at } = article;
-  const time = created_at.slice(11, 16);
-  const date =
-    created_at.slice(8, 10) +
-    "/" +
-    created_at.slice(5, 7) +
-    "/" +
-    created_at.slice(0, 4);
+  const formattedDate = formatDate(article.created_at);
+  const formattedTime = formatTime(article.created_at);
+
+  const articleId = article.article_id;
 
   return (
     <article>
@@ -14,14 +13,16 @@ export default function ArticleCard({ article }) {
         <img src={article.article_img_url} />
         <p className="author">Author: {article.author}</p>
         <p>Category: {article.topic}</p>
-        <h2>{article.title}</h2>
+        <Link to={`/articles/${articleId}`} className="link">
+          <h2>{article.title}</h2>
+        </Link>
       </div>
 
       <div className="metadata ">
         <footer>
-          <p class="votes">❤ {article.votes}</p>
+          <p className="votes">❤ {article.votes}</p>
           <p>
-            {date} {time}
+            {formattedDate} {formattedTime}
           </p>
         </footer>
       </div>

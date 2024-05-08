@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { getArticles } from "../../../api";
 import ArticleCard from "./ArticleCard";
+import Filter from "../Filter";
 
 export default function ArticlesList() {
   const [articles, setArticles] = useState([]);
@@ -15,11 +16,12 @@ export default function ArticlesList() {
   }, []);
 
   return isLoading ? (
-    <div class="loader-container">
-      <div class="loader"></div>
+    <div className="loader-container">
+      <div className="loader"></div>
     </div>
   ) : (
     <section>
+      <Filter />
       <ul className="articles-list">
         {articles.map((article) => {
           return <ArticleCard key={article.article_id} article={article} />;
