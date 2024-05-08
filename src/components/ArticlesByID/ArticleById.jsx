@@ -47,6 +47,7 @@ export default function ArticleById() {
         </footer>
       </div>
     </article>
+    <h3 className="log-comment">Comments</h3>
       <Comments article_id={article_id}/>
       </div>
   );

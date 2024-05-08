@@ -50,6 +50,13 @@ const updateVotesByArticleId = (article_id, voteChange) => {
   );
 };
 
+const postComment = (comment, article_id) => {
+  return axios.post(
+    `https://nc-news-ufj8.onrender.com/api/articles/${article_id}/comments`,
+    comment
+  );
+};
+
 export {
   getArticles,
   getCategories,
@@ -57,4 +64,5 @@ export {
   getComments,
   updateVotesByArticleId,
   getAllUsers,
+  postComment,
 };
