@@ -46,14 +46,13 @@ export default function PostCommentForm({ setComments }) {
     <form className="comment-form" onSubmit={handleSubmit}>
       {isLoading ? <h3>Posting your comment...</h3> : <h3>Add comment</h3>}
       <textarea
-    className="comment-input"
-    placeholder="Type here..."
-    autoComplete="off"
-    disabled={isLoading}
-    value={commentInput}
-    onChange={handleChange}
-></textarea>
-      <br/>
+        className="comment-input"
+        placeholder="Type here..."
+        autoComplete="off"
+        disabled={isLoading}
+        value={commentInput}
+        onChange={handleChange}
+      ></textarea>
       <button id="post-button" className="comment-button">
         Post
       </button>

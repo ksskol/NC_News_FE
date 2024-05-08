@@ -22,11 +22,13 @@ export default function Comments({ article_id }) {
     <section>
       <div className="log-comment">
         <h3>Log in to add comment.</h3>
-        <PostCommentForm setComments={setComments}/>
+        <PostCommentForm setComments={setComments} />
       </div>
+      <div className="comment-cards">
       {comments.map((comment) => {
-        return <CommentCard comment={comment} key={comment.comment_id} />;
+          return <CommentCard comment={comment} key={comment.comment_id} />
       })}
+        </div>;
     </section>
   );
 }
