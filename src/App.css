@@ -1,4 +1,4 @@
-/* header */
+/* Header */
 header {
   background-color: #536688;
   color: #e4e4e4;
@@ -18,28 +18,33 @@ button {
   transition: background-color 0.3s ease;
   cursor: pointer;
 }
+
 button:hover {
   background-color: #6e809f;
   color: #ebeef7;
 }
 
-/* article by id*/
-.body{
+/* Article ID Info */
+.body {
   color: #2c3648 !important;
   font-size: medium;
   margin: 0 10px;
 }
-.info{
+
+.info {
   margin-left: 10px;
 }
-.time{
+
+.time {
   float: right;
   margin-right: 10px;
 }
-.img-by-id{
+
+.img-by-id {
   margin-bottom: 0;
 }
-/* article card */
+
+/* Article Card */
 article {
   overflow: hidden;
   padding-bottom: 25px;
@@ -60,6 +65,7 @@ article footer {
   float: left;
   width: 100%;
 }
+
 .author,
 .votes {
   float: right;
@@ -70,11 +76,12 @@ article footer {
   margin-left: 10px;
   color: #95a0b3;
 }
+
 .article-text p {
   color: #95a0b3;
 }
 
-/* filter */
+/* Filter */
 .filter select {
   border: none;
   background-color: #536688;
@@ -83,27 +90,25 @@ article footer {
   padding: 8px 16px;
   margin-left: 10px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
 }
-
-.filter select:hover {
-  background-color: #6e809f;
-}
-
-/* link */
-.link{
+/* Link */
+.link {
   color: #2c3648;
   text-decoration: none;
   transition: 0.3s ease;
 }
-.link:hover{
+
+.link:hover {
   color: #95a0b3;
 }
 
-header .link{
+/* Header Link */
+header .link {
   color: #ebeef7;
   text-decoration: none;
 }
+
 header .link:hover{
+  background-color: #e4e4e4;
   color: #95a0b3;
 }
