@@ -113,3 +113,10 @@ header .link:hover{
   background-color: #e4e4e4;
   color: #95a0b3;
 }
+
+/* Comments */
+.comment{
+background-color: #e4e4e4;
+padding: 10px;
+border-radius: 5px;
+}

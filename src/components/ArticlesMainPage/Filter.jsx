@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { getCategories } from "../../api";
+import { getCategories } from "../../../api";
+
 
 export default function Filter({ setCategory }) {
   const [categories, setCategories] = useState([]);
@@ -20,7 +21,7 @@ export default function Filter({ setCategory }) {
           setCurrentCategory(event.target.value);
         }}
       >
-        <option value="all">all items</option>
+        <option value="all">all news</option>
         {categories.map((topics, index) => {
           return (
             <option value={topics.slug} key={index}>
