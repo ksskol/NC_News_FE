@@ -70,7 +70,22 @@ article footer {
 .author,
 .votes {
   float: right;
-  margin-right: 10px;
+  margin-right: 30px;
+  background-color: #ffffff;
+  border-radius: 100px;
+}
+
+.default:hover{
+  background-color: #ffffff;
+  color: #2c3648;
+
+}
+.liked {
+  color: #e40707;
+}
+.liked:hover{
+  background-color: #ffffff;
+  color: #c70404;
 }
 
 .metadata {
@@ -109,33 +124,28 @@ header .link {
   text-decoration: none;
 }
 
-header .link:hover{
+header .link:hover {
   background-color: #e4e4e4;
   color: #95a0b3;
 }
 
 /* Comments */
-.log-comment{
-padding-left: 10px;
+.log-comment {
+  padding-left: 10px;
 }
-.comment{
-background-color: #e4e4e4;
-padding: 10px;
-padding-bottom: 25px;
-border-radius: 5px;
+.comment {
+  background-color: #e4e4e4;
+  padding: 10px;
+  padding-bottom: 20px;
+  border-radius: 5px;
 }
-.comment-card{
+.comment-card {
   margin: 10px;
 }
-.comment-votes{
-  float: right;
-  margin-right: 10px;
-  color: #95a0b3;
-}
-.comment-body{
+.comment-body {
   margin-top: 10px;
 }
 .time,
-.comment-author{
+.comment-author {
   color: #95a0b3;
 }

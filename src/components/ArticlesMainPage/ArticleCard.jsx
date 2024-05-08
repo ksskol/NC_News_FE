@@ -10,9 +10,9 @@ export default function ArticleCard({ article }) {
   return (
     <article>
       <div className="article-text">
-        <img src={article.article_img_url} />
         <p className="author">Author: {article.author}</p>
-        <p>Category: {article.topic}</p>
+        <img src={article.article_img_url} />
+        <p className="category">Category: {article.topic}</p>
         <Link to={`/articles/${articleId}`} className="link">
           <h2>{article.title}</h2>
         </Link>
