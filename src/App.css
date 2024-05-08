@@ -41,6 +41,7 @@ button:hover {
 }
 
 .img-by-id {
+  max-width: 20rem;
   margin-bottom: 0;
 }
 
@@ -56,7 +57,7 @@ article img {
   max-width: 12rem;
   border-radius: 5px;
   float: left;
-  width: 30%;
+  width: 50%;
   margin: 10px;
 }
 
