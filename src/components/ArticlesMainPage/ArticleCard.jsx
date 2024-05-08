@@ -20,7 +20,7 @@ export default function ArticleCard({ article }) {
 
       <div className="metadata ">
         <footer>
-          <p className="votes">❤ {article.votes}</p>
+          <p className="votes"> {article.votes} ❤</p>
           <p>
             {formattedDate} {formattedTime}
           </p>

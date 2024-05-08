@@ -1,7 +1,8 @@
 import { useParams } from "react-router";
-import { getArticleById } from "../../api";
+import { getArticleById } from "../../../api";
 import { useEffect, useState } from "react";
-import { formatDate, formatTime } from "../use";
+import { formatDate, formatTime } from "../../use";
+import Comments from "./CommentsList";
 
 export default function ArticleById() {
   const [isLoading, setIsLoading] = useState(true);
@@ -9,7 +10,6 @@ export default function ArticleById() {
   const { article_id } = useParams();
 
   useEffect(() => {
-    setIsLoading(true);
     getArticleById(article_id).then(({ data }) => {
       setArticle(data.article);
       setIsLoading(false);
@@ -24,6 +24,7 @@ export default function ArticleById() {
       <div className="loader"></div>
     </div>
   ) : (
+    <div className="page-by-article-id">
     <article className="article-by-id">
       <div className="article-text">
         <p className="time">
@@ -41,9 +42,11 @@ export default function ArticleById() {
 
       <div className="metadata ">
         <footer>
-          <p className="votes">❤ {article.votes}</p>
+          <p className="votes"> {article.votes} ❤</p>
         </footer>
       </div>
     </article>
+      <Comments article_id={article_id}/>
+      </div>
   );
 }

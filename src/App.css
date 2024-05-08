@@ -113,3 +113,29 @@ header .link:hover{
   background-color: #e4e4e4;
   color: #95a0b3;
 }
+
+/* Comments */
+.log-comment{
+padding-left: 10px;
+}
+.comment{
+background-color: #e4e4e4;
+padding: 10px;
+padding-bottom: 25px;
+border-radius: 5px;
+}
+.comment-card{
+  margin: 10px;
+}
+.comment-votes{
+  float: right;
+  margin-right: 10px;
+  color: #95a0b3;
+}
+.comment-body{
+  margin-top: 10px;
+}
+.time,
+.comment-author{
+  color: #95a0b3;
+}

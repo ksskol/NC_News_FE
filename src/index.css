@@ -40,7 +40,9 @@ body {
 @media (max-width: 300px) {
   article,
   .header-nav,
-  .filter {
+  .filter,
+  .comment,
+  .log-comment {
     width: 300px;
   }
 }
@@ -48,7 +50,9 @@ body {
 @media (min-width: 800px) {
   article,
   .header-nav,
-  .filter {
+  .filter,
+  .comment,
+  .log-comment{
     width: 800px;
     margin: 0 auto;
   }

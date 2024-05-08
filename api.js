@@ -1,12 +1,12 @@
 import axios from "axios";
 
-function getArticles() {
+const getArticles = () => {
   return axios
     .get(`https://nc-news-ufj8.onrender.com/api/articles`)
     .then((response) => {
-      return response.data
+      return response.data;
     });
-}
+};
 const getArticleById = (article_id) => {
   return axios
     .get(`https://nc-news-ufj8.onrender.com/api/articles/${article_id}`)
@@ -15,6 +15,13 @@ const getArticleById = (article_id) => {
     });
 };
 
+const getComments = (article_id) => {
+  return axios
+    .get(`https://nc-news-ufj8.onrender.com/api/articles/${article_id}/comments`)
+    .then((response) => {
+      return response;
+    });
+};
 
 const getCategories = () => {
   return axios
@@ -23,4 +30,4 @@ const getCategories = () => {
       return response;
     });
 };
-export { getArticles, getCategories, getArticleById};
+export { getArticles, getCategories, getArticleById, getComments };
