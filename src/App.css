@@ -25,6 +25,10 @@ button:hover {
 }
 
 /* Article ID Info */
+.error{
+  float: right;
+  margin-top: 5px;
+}
 .body {
   color: #2c3648 !important;
   font-size: medium;

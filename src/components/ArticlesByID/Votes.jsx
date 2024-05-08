@@ -4,6 +4,7 @@ import { updateVotesByArticleId } from "../../../api";
 function VoteArticle({ article_id, votes }) {
   const [voteCount, setVoteCount] = useState(votes);
   const [voted, setVoted] = useState(false);
+  const [err, setErr] = useState(null);
 
   useEffect(() => {
     const voteStatus = localStorage.getItem(`vote_${article_id}`);
@@ -24,19 +25,24 @@ function VoteArticle({ article_id, votes }) {
     setVoted((prevVoted) => !prevVoted);
     updateVotesByArticleId(article_id, voteChange).then(() => {
       setVoteCount((prevVoteCount) => prevVoteCount + voteChange);
-    });
+    }) .catch((error) => {
+        setErr("Something went wrong, please try again.");
+      });
   };
 
   const buttonClass = voted ? "liked" : "default";
+  const errorClass = err ? "error" : ""; 
+
   return (
-    <div id="article-voting">
+      <div id="article-voting">
       <button
         className={`votes ${buttonClass}`}
         id="vote-button"
         onClick={handleVoteClick}
-      >
+        >
         {voted ? `❤ ${voteCount}` : `❤ ${voteCount}`}
       </button>
+          <p className={errorClass}>{err}</p>
     </div>
   );
 }
