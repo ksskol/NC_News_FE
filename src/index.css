@@ -41,7 +41,8 @@ body {
   article,
   .header-nav,
   .filter,
-  .comment {
+  .comment,
+  .log-comment {
     width: 300px;
   }
 }
@@ -50,7 +51,8 @@ body {
   article,
   .header-nav,
   .filter,
-  .comment{
+  .comment,
+  .log-comment{
     width: 800px;
     margin: 0 auto;
   }

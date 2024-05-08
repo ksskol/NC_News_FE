@@ -10,7 +10,6 @@ export default function ArticleById() {
   const { article_id } = useParams();
 
   useEffect(() => {
-    setIsLoading(true);
     getArticleById(article_id).then(({ data }) => {
       setArticle(data.article);
       setIsLoading(false);

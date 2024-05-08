@@ -5,14 +5,16 @@ export default function CommentsCard({ comment }) {
   const formattedTime = formatTime(comment.created_at);
 
   return (
-    <section className="comment">
-      <p className="time">
-        {formattedTime} {formattedDate}
-      </p>
-      <p>Author:{comment.author}</p>
-      <p>{comment.body}</p>
+    <div className="comment-card">
+      <section className="comment">
+        <p className="time">
+          {formattedTime} {formattedDate}
+        </p>
+        <p className="comment-author">Author: {comment.author}</p>
+        <p className="comment-body">{comment.body}</p>
 
-      <p> {comment.votes} ❤</p>
-    </section>
+        <p className="comment-votes">{comment.votes} ❤</p>
+      </section>
+    </div>
   );
 }
