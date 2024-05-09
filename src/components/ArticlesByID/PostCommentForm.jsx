@@ -1,8 +1,9 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { useParams } from "react-router";
 import { postComment } from "../../../api";
+//import { UserContext } from "../contexts/User";
 
-export default function PostCommentForm({ setComments }) {
+export default function PostCommentForm({ setComments, username }) {
   const [isValidForm, setIsValidForm] = useState(true);
   const [isLoading, setIsLoading] = useState(false);
   const [commentInput, setCommentInput] = useState("");
@@ -18,7 +19,7 @@ export default function PostCommentForm({ setComments }) {
       ? setIsValidForm(false)
       : (() => {
           const commentInfo = {
-            username: "grumpy19",
+            username: username,
             body: e.target[0].value,
           };
           setIsLoading(true);
