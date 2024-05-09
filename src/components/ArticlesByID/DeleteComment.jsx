@@ -29,7 +29,7 @@ export default function DeleteComment({
   if (isAuthor) {
     return (
       <div>
-        <button onClick={handleDeleteComment}>Delete comment</button>
+        <button id="delete-button" onClick={handleDeleteComment}>Delete comment</button>
         {error ? <p>Sorry, there was a problem deleting the comment.</p> : null}
       </div>
     );

@@ -6,6 +6,7 @@ header {
   margin-bottom: 15px;
   position: sticky;
   top: 0;
+  z-index: 9999;
 }
 
 .acc-button {
@@ -198,4 +199,21 @@ header .link:hover {
 #write-something,
 #post-failed {
   font-size: 14px;
+}
+
+/* Delete comment */
+#delete-button{
+  float: right;
+  margin-top: 10px;
+  padding: 5px;
+  border-radius: 5px;
+  color: #ebeef7;
+  background-color: #6e809f;
+  transition: background-color 0.3s ease;
+}
+#delete-button:hover{
+  background-color: #b50e0e;
+}
+#delete-comment-card{
+  padding-bottom: 25px;
 }

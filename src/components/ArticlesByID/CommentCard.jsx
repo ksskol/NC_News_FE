@@ -12,12 +12,14 @@ export default function CommentsCard({ setComments, comment, username }) {
         </p>
         <p className="comment-author">Comment by: {comment.author}</p>
         <p className="comment-body">{comment.body}</p>
+        <div id="delete-comment-card">
         <DeleteComment
           comment_id={comment.comment_id}
           setComments={setComments}
           username={username}
           authors={comment.author}
         />
+        </div>
       </section>
     </div>
   );
