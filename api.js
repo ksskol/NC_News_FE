@@ -17,7 +17,9 @@ const getArticleById = (article_id) => {
 
 const getComments = (article_id) => {
   return axios
-    .get(`https://nc-news-ufj8.onrender.com/api/articles/${article_id}/comments`)
+    .get(
+      `https://nc-news-ufj8.onrender.com/api/articles/${article_id}/comments`
+    )
     .then((response) => {
       return response;
     });
@@ -30,4 +32,20 @@ const getCategories = () => {
       return response;
     });
 };
-export { getArticles, getCategories, getArticleById, getComments };
+
+const updateVotesByArticleId = (article_id, voteChange) => {
+  const updateVoteObject = { inc_votes: voteChange };
+
+  return axios.patch(
+    `https://nc-news-ufj8.onrender.com/api/articles/${article_id}`,
+    updateVoteObject
+  );
+};
+
+export {
+  getArticles,
+  getCategories,
+  getArticleById,
+  getComments,
+  updateVotesByArticleId,
+};

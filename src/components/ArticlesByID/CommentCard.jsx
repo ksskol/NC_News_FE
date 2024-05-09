@@ -10,10 +10,8 @@ export default function CommentsCard({ comment }) {
         <p className="time">
           {formattedTime} {formattedDate}
         </p>
-        <p className="comment-author">Author: {comment.author}</p>
+        <p className="comment-author">Comment by: {comment.author}</p>
         <p className="comment-body">{comment.body}</p>
-
-        <p className="comment-votes">{comment.votes} ❤</p>
       </section>
     </div>
   );

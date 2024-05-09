@@ -3,6 +3,7 @@ import { getArticleById } from "../../../api";
 import { useEffect, useState } from "react";
 import { formatDate, formatTime } from "../../use";
 import Comments from "./CommentsList";
+import Votes from "./Votes";
 
 export default function ArticleById() {
   const [isLoading, setIsLoading] = useState(true);
@@ -42,7 +43,7 @@ export default function ArticleById() {
 
       <div className="metadata ">
         <footer>
-          <p className="votes"> {article.votes} ❤</p>
+          <Votes votes={article.votes} article_id={article_id} />
         </footer>
       </div>
     </article>

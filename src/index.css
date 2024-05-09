@@ -43,16 +43,25 @@ body {
   .filter,
   .comment,
   .log-comment {
-    width: 300px;
+    width: 100%;
   }
 }
 
-@media (min-width: 800px) {
+@media (min-width: 301px) and (max-width: 460px) {
+  .author {
+    margin-left: 90px;
+  }
+  .category {
+    margin-left: 10px;
+  }
+}
+
+@media (min-width: 801px) {
   article,
   .header-nav,
   .filter,
   .comment,
-  .log-comment{
+  .log-comment {
     width: 800px;
     margin: 0 auto;
   }
