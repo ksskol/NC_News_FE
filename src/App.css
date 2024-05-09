@@ -204,8 +204,9 @@ header .link:hover {
 /* Delete comment */
 #delete-button{
   float: right;
+padding-right: 15px;
   margin-top: 10px;
-  padding: 5px;
+  padding: 5px 10px;
   border-radius: 5px;
   color: #ebeef7;
   background-color: #6e809f;
