@@ -8,7 +8,7 @@ header {
   top: 0;
 }
 
-button {
+.acc-button {
   float: right;
   border: none;
   background-color: #e4e4e4;
@@ -19,13 +19,13 @@ button {
   cursor: pointer;
 }
 
-button:hover {
+.acc-button:hover {
   background-color: #6e809f;
   color: #ebeef7;
 }
 
 /* Article ID Info */
-.error{
+.error {
   float: right;
   margin-top: 5px;
 }
@@ -47,6 +47,18 @@ button:hover {
 .img-by-id {
   max-width: 20rem;
   margin-bottom: 0;
+}
+
+.default:hover {
+  background-color: #ffffff;
+  color: #2c3648;
+}
+.liked {
+  color: #e40707;
+}
+.liked:hover {
+  background-color: #ffffff;
+  color: #c70404;
 }
 
 /* Article Card */
@@ -77,19 +89,6 @@ article footer {
   margin-right: 30px;
   background-color: #ffffff;
   border-radius: 100px;
-}
-
-.default:hover{
-  background-color: #ffffff;
-  color: #2c3648;
-
-}
-.liked {
-  color: #e40707;
-}
-.liked:hover{
-  background-color: #ffffff;
-  color: #c70404;
 }
 
 .metadata {
@@ -152,4 +151,43 @@ header .link:hover {
 .time,
 .comment-author {
   color: #95a0b3;
+}
+
+/* Post Comment */
+.comment-form {
+  margin: 10px;
+}
+
+.comment-input {
+  background-color: #e4e4e4;
+  padding: 10px;
+  padding-bottom: 20px;
+  border-radius: 5px;
+  width: 95%;
+  height: 80px;
+  resize: none;
+  font-size: 13px;
+}
+.comment-button {
+  margin-top: 10px;
+  border: none;
+  background-color: #e4e4e4;
+  color: #536688;
+  border-radius: 5px;
+  padding: 5px 15px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+.comment-button:hover {
+  background-color: #6e809f;
+  color: #ebeef7;
+}
+
+.comment-error {
+  color: red;
+}
+
+#write-something,
+#post-failed {
+  font-size: 14px;
 }

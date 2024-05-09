@@ -4,7 +4,9 @@ export default function Header() {
   return (
     <header>
       <div className="header-nav">
-        <button>Account</button>
+      <Link to={`/login`} className="link">
+        <button className="acc-button">Account</button>
+        </Link>
           <Link to={`/`} className="link">
             <h2>NC News</h2>
           </Link>
