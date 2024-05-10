@@ -6,6 +6,7 @@ header {
   margin-bottom: 15px;
   position: sticky;
   top: 0;
+  z-index: 9999;
 }
 
 .acc-button {
@@ -144,6 +145,7 @@ header .link:hover {
 }
 .comment-card {
   margin: 10px;
+  position: relative;
 }
 .comment-body {
   margin-top: 10px;
@@ -152,10 +154,13 @@ header .link:hover {
 .comment-author {
   color: #95a0b3;
 }
+.comment-cards{
+  margin-top: 40px;
+}
 
 /* Post Comment */
-.comment-form {
-  margin: 10px;
+.comment-cards {
+  margin-top: 50px;
 }
 
 .comment-input {
@@ -169,18 +174,22 @@ header .link:hover {
   font-size: 13px;
 }
 .comment-button {
+  
+  float: right;
+  margin-right: 20px;
   margin-top: 10px;
   border: none;
-  background-color: #e4e4e4;
-  color: #536688;
+  background-color: #6e809f;
+  color: #ebeef7;
   border-radius: 5px;
   padding: 5px 15px;
   transition: background-color 0.3s ease;
   cursor: pointer;
 }
 .comment-button:hover {
-  background-color: #6e809f;
-  color: #ebeef7;
+
+  background-color: #536688;
+  color: #e4e4e4;
 }
 
 .comment-error {
@@ -190,4 +199,21 @@ header .link:hover {
 #write-something,
 #post-failed {
   font-size: 14px;
+}
+
+/* Delete comment */
+#delete-button{
+  float: right;
+  margin-top: 10px;
+  padding: 5px;
+  border-radius: 5px;
+  color: #ebeef7;
+  background-color: #6e809f;
+  transition: background-color 0.3s ease;
+}
+#delete-button:hover{
+  background-color: #b50e0e;
+}
+#delete-comment-card{
+  padding-bottom: 25px;
 }

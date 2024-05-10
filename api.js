@@ -56,6 +56,11 @@ const postComment = (comment, article_id) => {
     comment
   );
 };
+const deleteComment = (comment_id) => {
+  return axios.delete(
+    `https://nc-news-ufj8.onrender.com/api/comments/${comment_id}`
+  );
+};
 
 export {
   getArticles,
@@ -65,4 +70,5 @@ export {
   updateVotesByArticleId,
   getAllUsers,
   postComment,
+  deleteComment
 };

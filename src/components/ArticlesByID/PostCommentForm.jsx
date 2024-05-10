@@ -1,8 +1,9 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { useParams } from "react-router";
 import { postComment } from "../../../api";
+//import { UserContext } from "../contexts/User";
 
-export default function PostCommentForm({ setComments }) {
+export default function PostCommentForm({ setComments, username }) {
   const [isValidForm, setIsValidForm] = useState(true);
   const [isLoading, setIsLoading] = useState(false);
   const [commentInput, setCommentInput] = useState("");
@@ -18,7 +19,7 @@ export default function PostCommentForm({ setComments }) {
       ? setIsValidForm(false)
       : (() => {
           const commentInfo = {
-            username: "grumpy19",
+            username: username,
             body: e.target[0].value,
           };
           setIsLoading(true);
@@ -46,14 +47,13 @@ export default function PostCommentForm({ setComments }) {
     <form className="comment-form" onSubmit={handleSubmit}>
       {isLoading ? <h3>Posting your comment...</h3> : <h3>Add comment</h3>}
       <textarea
-    className="comment-input"
-    placeholder="Type here..."
-    autoComplete="off"
-    disabled={isLoading}
-    value={commentInput}
-    onChange={handleChange}
-></textarea>
-      <br/>
+        className="comment-input"
+        placeholder="Type here..."
+        autoComplete="off"
+        disabled={isLoading}
+        value={commentInput}
+        onChange={handleChange}
+      ></textarea>
       <button id="post-button" className="comment-button">
         Post
       </button>
