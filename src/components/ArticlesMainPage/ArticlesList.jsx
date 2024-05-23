@@ -6,14 +6,15 @@ import Filter from "./Filter";
 export default function ArticlesList() {
   const [articles, setArticles] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [selectedCategory, setSelectedCategory] = useState("all");
 
   useEffect(() => {
     setIsLoading(true);
-    getArticles().then(({ articles }) => {
+    getArticles(selectedCategory).then(({ articles }) => {
       setArticles(articles);
       setIsLoading(false);
     });
-  }, []);
+  }, [selectedCategory]);
 
   return isLoading ? (
     <div className="loader-container">
@@ -21,10 +22,14 @@ export default function ArticlesList() {
     </div>
   ) : (
     <section>
-      <Filter />
+      <Filter setSelectedCategory={setSelectedCategory} />
       <ul className="articles-list">
-        {articles.map((article) => {
-          return <ArticleCard key={article.article_id} article={article} />;
+      {articles.map((article) => {
+          if (article.topic === selectedCategory || selectedCategory === "all") {
+            return <ArticleCard key={article.article_id} article={article} />;
+          } else {
+            return null;
+          }
         })}
       </ul>
     </section>

@@ -1,34 +1,34 @@
 import { useEffect, useState } from "react";
 import { getCategories } from "../../../api";
 
-
-export default function Filter({ setCategory }) {
+export default function Filter({ setSelectedCategory }) {
   const [categories, setCategories] = useState([]);
-  const [currentCategory, setCurrentCategory] = useState();
+  const [currentCategory, setCurrentCategory] = useState("all");
 
   useEffect(() => {
-    getCategories().then((categories) => {
-      setCategories(categories.data.topics);
+    getCategories().then((response) => {
+      const data = response.data.topics;
+      const topics = [...new Set(data.map((val) => val.slug))];
+      setCategories(topics);
     });
   }, []);
 
   return (
     <div className="filter">
-       <select
+      <select
         value={currentCategory}
         onChange={(event) => {
-          setCategory(event.target.value);
-          setCurrentCategory(event.target.value);
+          const selectedCategory = event.target.value;
+          setSelectedCategory(selectedCategory);
+          setCurrentCategory(selectedCategory);
         }}
       >
-        <option value="all">all news</option>
-        {categories.map((topics, index) => {
-          return (
-            <option value={topics.slug} key={index}>
-              {topics.slug}
-            </option>
-          );
-        })}
+        <option value="all">{currentCategory === "all" ? "all news" : currentCategory}</option>
+        {categories.map((slug, index) => (
+          <option value={slug} key={index}>
+            {slug}
+          </option>
+        ))}
       </select>
     </div>
   );
